@@ -1,0 +1,32 @@
+{
+  "name": "my-screensaver",
+  "version": "1.0.0",
+  "main": "./flipClock/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^32.0.2",
+    "electron-builder": "^25.0.5",
+    "electron-packager": "^17.1.2"
+  },
+  "build": {
+    "appId": "com.example.my-screensaver",
+    "productName": "MyScreensaver",
+    "files": [
+      "flipClock/**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "dependencies": {
+    "my-screensaver": "file:",
+    "node-global-key-listener": "^0.3.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

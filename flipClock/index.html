@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Saat Uygulaması</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!--screen center div -->
+    <div id="mirror" style="background-color:rgb(0 0 0); background-image: none;">
+
+        <div class="center">
+            <div class="clock clock-builder-output flip-clock-wrapper" style="margin:2em;"></div>
+        </div>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+<script type="text/javascript">
+    var clock;
+    var idleTime = 0;
+    $(document).ready(function () {
+        var date = new Date();
+
+        clock = $('.clock').FlipClock(date, {
+            clockFace: 'TwentyFourHourClock',
+            showSeconds: true,
+            autoStart: true,
+
+        });
+        function openFullscreen() {
+            var elem = document.documentElement;
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.mozRequestFullScreen) { // Firefox
+                elem.mozRequestFullScreen();
+            } else if (elem.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) { // IE/Edge
+                elem.msRequestFullscreen();
+            }
+        }
+
+        $('body').click(function () {
+            openFullscreen();
+        });
+
+        $(this).mousemove(resetIdleTime);
+        $(this).keypress(resetIdleTime);
+
+        function resetIdleTime() {
+            idleTime = 0;
+        }
+
+        setInterval(timerIncrement, 200); // 1 dakika
+
+        function timerIncrement() {
+            idleTime++;
+            if (idleTime > 5) { // 5 dakika
+                openFullscreen();
+            }
+        }
+    });
+
+    document.addEventListener('dblclick', () => {
+        window.electron.sendDoubleClick();
+    });
+
+
+
+
+
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Tab') {
+            event.preventDefault();
+            return false;
+        }
+    });
+</script>
+
+</html>

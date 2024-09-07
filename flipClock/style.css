@@ -1,0 +1,1450 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: #010101;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-family: verdana, arial, sans-serif;
+    font-size: 1em;
+    content-zooming: none;
+}
+
+* {
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+.dn {
+    display: none !important;
+}
+
+#main {
+    position: relative;
+}
+
+#main2 {
+    padding: 10px 22px;
+    margin: 0 auto;
+    max-width: 1776px;
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+
+#main img {
+    max-width: 100%;
+}
+
+#footer {
+    height: 60px;
+    padding: 5px 20px;
+    background: #101010;
+    color: #fbfbfb;
+}
+
+#footer a {
+    color: #fbfbfb;
+}
+
+.nav_lang {
+    display: inline;
+}
+
+.nav_lang li {
+    margin: 0;
+    padding: 10px 15px 10px 0;
+    display: inline-block;
+}
+
+.thumbs_themes ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.thumbs_themes ul li {
+    list-style: none;
+    display: inline-block;
+    width: 19%;
+    margin: 0 0 32px 0;
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+}
+
+.thumbs_themes ul li label {
+    cursor: pointer;
+}
+
+.thumbs_themes ul li .thumbnail {
+    background-color: #ccc;
+    background-position: 50% 50%;
+    width: 100%;
+    height: 180px;
+    display: inline-block;
+    background-size: cover;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thumbs_themes ul li:hover .thumbnail {}
+
+.thumbs_themes ul li .txt {
+    padding: 8px 0;
+    overflow: hidden;
+    max-height: 40px;
+    position: relative;
+}
+
+.thumbs_themes ul li .txt::after {
+    content: "";
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 25px;
+    z-index: 1;
+    background: linear-gradient(to right, transparent, #fbfbfb);
+}
+
+.thumbs_themes ul li .wtch {
+    padding: 0;
+    height: 20px;
+    opacity: 0.8;
+    z-index: 9;
+}
+
+.thumbs_themes ul li .wtch .wtch_icon {
+    background: url('/img/play_grey40.svg') 0 0 no-repeat;
+    background-size: cover;
+    height: 20px;
+    width: 20px;
+    margin-right: 3px;
+    display: inline-block;
+}
+
+.thumbs_themes ul li .wtch .wtch_txt {
+    font-size: 16px;
+    color: #121212;
+    position: relative;
+    top: -3px;
+}
+
+.thumbs_themes ul li .shdw {
+    display: none;
+}
+
+.thumbs_check {
+    width: 48px;
+    height: 48px;
+    background: url('/img/check.svg') 0 0 no-repeat;
+    background-size: cover;
+    display: none;
+    opacity: 0.96;
+}
+
+.thumbs_check_dark {
+    background: url('/img/check_48.png') 0 0 no-repeat;
+}
+
+.thumbs_check.active {
+    display: block;
+}
+
+#colorWell {
+    z-index: -1;
+    position: absolute;
+    top: 0px;
+    left: 25px;
+}
+
+.z9 {
+    z-index: 9 !important;
+}
+
+.h2 {
+    font-size: 2em;
+    display: inline-block;
+    margin: 15px 0 30px;
+    font-weight: bold;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    transform: scale(3);
+}
+
+.flip-clock-wrapper {
+    max-width: 530px;
+    max-height: 300px;
+    height: auto;
+}
+
+#flipclock,
+#mirror {
+    width: 100%;
+    height: 100%;
+    margin: auto auto;
+    position: relative;
+    background-color: #121212;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: row;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+#flipclock {
+    height: 100%;
+    height: calc(100% - 100px);
+}
+
+* {
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+}
+
+.header {
+    height: 56px;
+    display: block;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    z-index: 3000;
+    background: #fbfbfb;
+}
+
+.header .logo img {
+    height: 46px;
+    margin: 6px 0;
+}
+
+.search-container form {
+    display: inline;
+    flex-direction: row;
+    align-items: center;
+    padding: 11px 15px;
+    overflow: hidden;
+    z-index: 1;
+    width: 359px;
+    position: absolute;
+    margin: 0 20%;
+    top: 11px;
+    border: 2px solid #222;
+    border-radius: 24px;
+}
+
+.search-container input {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 0;
+    width: 95%;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    letter-spacing: 0.5px;
+    font-family: verdana, sans-serif;
+}
+
+#dogs_btn {
+    background: #feffeb;
+    padding: 10px;
+    margin: 0 0 15px;
+    border: 2px dashed #29a53e;
+    color: blue;
+    cursor: pointer;
+    height: 64px;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+#dogs_btn:hover .dogs_icon {
+    transform: rotate(-15deg);
+}
+
+#dogs_btn:hover .dogs_text {
+    color: red;
+}
+
+.dogs_icon {
+    cursor: pointer;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url('/img/promo/Spotty.png') 50% 50% no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.dogs_text {
+    position: relative;
+    top: -11px;
+    left: 10px;
+}
+
+#fullscreen_btn {
+    position: absolute;
+    right: 15px;
+    top: -55px;
+}
+
+.fullscreen_icon {
+    cursor: pointer;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url('/img/fullscreen_w.png') 50% 50% no-repeat;
+    background-size: cover;
+}
+
+#themes_btn {
+    position: absolute;
+    right: 80px;
+    top: -55px;
+}
+
+.themes_icon {
+    cursor: pointer;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url('/img/themes_48.png') 50% 50% no-repeat;
+    background-size: contain;
+}
+
+#share_btn {
+    position: absolute;
+    right: 145px;
+    top: -55px;
+}
+
+.share_icon {
+    cursor: pointer;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url('/img/bar_share_w.png') 50% 50% no-repeat;
+    background-size: contain;
+}
+
+#share_btn .share_icon.share_action {
+    background-image: url(/img/bar_share_blue.png) !important;
+}
+
+#mirror_btn {
+    position: absolute;
+    right: calc(50% - 26px);
+    top: -55px;
+    transform: scale(1.3);
+    opacity: 0.75;
+}
+
+#mirror_btn:hover {
+    opacity: 1;
+}
+
+.mirror_icon {
+    cursor: pointer;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url('/img/mirrorX_w.png') 50% 50% no-repeat;
+    background-size: contain;
+}
+
+.mirrorX {
+    transform: scaleX(-1);
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    transform: scale(3.5);
+}
+
+.btns___ {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 8;
+    background: #fbfbfb;
+    padding: 0 0 10px;
+}
+
+.search_pool {
+    margin: 7px auto 15px;
+    padding: 0;
+    height: 32px;
+    overflow: hidden;
+}
+
+.search_pool ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    justify-content: unset;
+}
+
+.search_pool li {
+    display: inline-block;
+    margin: 0 8px 15px 0;
+}
+
+.search_pool li>span {
+    height: 32px;
+    color: #222;
+    background: rgba(0, 0, 0, .08);
+    border-radius: 8px;
+    clear: left;
+    cursor: pointer;
+    padding: 2px 17px 8px 17px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 250px;
+    overflow: hidden;
+    display: block;
+    position: relative;
+}
+
+.search_pool li>span.active {
+    background: rgba(0, 0, 0, .92);
+}
+
+.search_pool li a,
+.search_pool li span {
+    color: #222;
+}
+
+.search_pool li .active a,
+.search_pool li span.active {
+    color: #fff;
+}
+
+@media all and (max-width: 1920px) {
+    .center {
+        transform: scale(3);
+    }
+}
+
+@media all and (max-width: 1440px) {
+    .center {
+        transform: scale(2.5);
+    }
+}
+
+@media all and (max-width: 1280px) {
+    .center {
+        transform: scale(2);
+    }
+
+    .thumbs_themes ul li {
+        width: 24%;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    .center {
+        transform: scale(1.5);
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .thumbs_themes ul li {
+        width: 32.33%;
+    }
+}
+
+@media all and (max-width: 800px) {
+    .center {
+        transform: scale(1.45);
+    }
+}
+
+@media screen and (max-width: 640px) {
+    img {
+        width: 50%;
+    }
+
+    #dogs_btn {
+        margin: 0 5px 15px;
+    }
+
+    #share_btn {
+        position: absolute;
+        right: 15px;
+        top: -125px;
+    }
+
+    #main2 {
+        padding: 10px 0;
+    }
+
+    .thumbs_themes ul li {
+        width: 33%;
+        margin: 0 0 2px 0;
+    }
+
+    .thumbs_themes ul li .thumbnail {
+        background-color: #ccc;
+        border-radius: 0;
+    }
+
+    .thumbs_themes ul li .txt {
+        display: none;
+    }
+
+    .center {
+        transform: scale(1.35);
+    }
+
+    .thumbs_themes ul li .wtch {
+        position: absolute;
+        left: 4px;
+        bottom: 8px;
+    }
+
+    .thumbs_themes ul li .wtch .wtch_icon {
+        background: url('/img/play_white.svg') 0 0 no-repeat;
+        background-size: cover;
+        margin-right: 0;
+    }
+
+    .thumbs_themes ul li .wtch .wtch_txt {
+        color: #fff;
+    }
+
+    .thumbs_themes ul li .shdw {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        bottom: 0;
+        height: 40px;
+        width: 100%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.24) 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    .search_pool {
+        margin: 4px 4px 13px;
+    }
+}
+
+#more {
+    margin: 0;
+    width: 100%;
+}
+
+#more span {
+    margin: 0 auto;
+    display: none;
+    cursor: pointer;
+    height: 11px;
+    width: 43px;
+    background: url('data:image/gif;base64,R0lGODlhKwALAPEAAPm5E/vzG/nUFvvzGyH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAKwALAAACMoSOCMuW2diD88UKG95W88uF4DaGWFmhZid93pq+pwxnLUnXh8ou+sSz+T64oCAyTBUAACH5BAkKAAAALAAAAAArAAsAAAI9xI4IyyAPYWOxmoTHrHzzmGHe94xkmJifyqFKQ0pwLLgHa82xrekkDrIBZRQab1jyfY7KTtPimixiUsevAAAh+QQJCgAAACwAAAAAKwALAAACPYSOCMswD2FjqZpqW9xv4g8KE7d54XmMpNSgqLoOpgvC60xjNonnyc7p+VKamKw1zDCMR8rp8pksYlKorgAAIfkECQoAAAAsAAAAACsACwAAAkCEjgjLltnYmJS6Bxt+sfq5ZUyoNJ9HHlEqdCfFrqn7DrE2m7Wdj/2y45FkQ13t5itKdshFExC8YCLOEBX6AhQAADsAAAAAAAAAAAA=') no-repeat 0;
+}
+
+body::-webkit-scrollbar {
+    width: 16px;
+}
+
+body::-webkit-scrollbar-thumb {
+    height: 56px;
+    border-radius: 8px;
+    border: 4px solid transparent;
+    background-clip: content-box;
+    background-color: #606060;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #909090;
+}
+
+body .flip-clock-wrapper ul li a div div.inn,
+body .flip-clock-small-wrapper ul li a div div.inn {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+body .flip-clock-dot,
+body .flip-clock-small-wrapper .flip-clock-dot {
+    background: #ffffff;
+}
+
+body .flip-clock-wrapper .flip-clock-meridium a,
+body .flip-clock-small-wrapper .flip-clock-meridium a {
+    color: #323434;
+}
+
+.flip-clock-wrapper * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-clock-wrapper a {
+    cursor: pointer;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    color: #ccc;
+}
+
+.flip-clock-wrapper a:hover {
+    color: #fff;
+}
+
+.flip-clock-wrapper ul {
+    list-style: none;
+}
+
+.flip-clock-wrapper.clearfix:before,
+.flip-clock-wrapper.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.flip-clock-wrapper.clearfix:after {
+    clear: both;
+}
+
+.flip-clock-wrapper.clearfix {
+    *zoom: 1;
+}
+
+.flip-clock-wrapper {
+    font: normal 11px "Helvetica Neue", Helvetica, sans-serif;
+    -webkit-user-select: none;
+}
+
+.flip-clock-wrapper .flip-clock-meridium {
+    background: none !important;
+    box-shadow: 0 0 0 !important;
+    font-size: 36px !important;
+}
+
+.flip-clock-wrapper .flip-clock-meridium a {
+    color: #313333;
+}
+
+.flip-clock-wrapper {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin: 1em;
+}
+
+.flip-clock-wrapper:before,
+.flip-clock-wrapper:after {
+    content: " ";
+    display: table;
+}
+
+.flip-clock-wrapper:after {
+    clear: both;
+}
+
+.flip-clock-wrapper ul {
+    position: relative;
+    float: left;
+    margin: 5px;
+    width: 60px;
+    height: 90px;
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 87px;
+    border-radius: 6px;
+    background: #000;
+}
+
+.flip-clock-wrapper ul li {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-decoration: none !important;
+    margin-left: 0;
+}
+
+.flip-clock-wrapper ul li:first-child {
+    z-index: 2;
+}
+
+.flip-clock-wrapper ul li a {
+    display: block;
+    height: 100%;
+    -webkit-perspective: 200px;
+    -moz-perspective: 200px;
+    perspective: 200px;
+    margin: 0 !important;
+    overflow: visible !important;
+    cursor: default !important;
+}
+
+.flip-clock-wrapper ul li a div {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    font-size: 80px;
+    overflow: hidden;
+}
+
+.flip-clock-wrapper ul li a div .shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.flip-clock-wrapper ul li a div.up {
+    -webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    top: 0;
+}
+
+.flip-clock-wrapper ul li a div.up:after {
+    content: "";
+    position: absolute;
+    top: 44px;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.flip-clock-wrapper ul li a div.down {
+    -webkit-transform-origin: 50% 0;
+    -moz-transform-origin: 50% 0;
+    -ms-transform-origin: 50% 0;
+    -o-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    bottom: 0;
+}
+
+.flip-clock-wrapper ul li a div div.inn {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 200%;
+    color: #ccc;
+    text-shadow: 0 1px 2px #000;
+    text-align: center;
+    background-color: #333;
+    border-radius: 6px;
+    font-size: 70px;
+}
+
+.flip-clock-wrapper ul li a div.up div.inn {
+    top: 0;
+}
+
+.flip-clock-wrapper ul li a div.down div.inn {
+    bottom: 0;
+}
+
+.flip-clock-wrapper ul.play li.flip-clock-before {
+    z-index: 3;
+}
+
+.flip-clock-wrapper .flip {
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); */
+}
+
+.flip-clock-wrapper ul.play li.flip-clock-active {
+    -webkit-animation: asd 0.5s 0.5s linear both;
+    -moz-animation: asd 0.5s 0.5s linear both;
+    animation: asd 0.5s 0.5s linear both;
+    z-index: 5;
+}
+
+.flip-clock-divider {
+    float: left;
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 100px;
+}
+
+.flip-clock-divider:first-child {
+    width: 0;
+}
+
+.flip-clock-dot {
+    display: block;
+    background: #323434;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    left: 5px;
+}
+
+.flip-clock-divider .flip-clock-label {
+    position: absolute;
+    top: -1.5em;
+    right: -86px;
+    color: black;
+    text-shadow: none;
+}
+
+.flip-clock-divider.minutes .flip-clock-label {
+    right: -88px;
+}
+
+.flip-clock-divider.seconds .flip-clock-label {
+    right: -91px;
+}
+
+.flip-clock-dot.top {
+    top: 30px;
+}
+
+.flip-clock-dot.bottom {
+    bottom: 30px;
+}
+
+@-webkit-keyframes asd {
+    0% {
+        z-index: 2;
+    }
+
+    20% {
+        z-index: 4;
+    }
+
+    100% {
+        z-index: 4;
+    }
+}
+
+@-moz-keyframes asd {
+    0% {
+        z-index: 2;
+    }
+
+    20% {
+        z-index: 4;
+    }
+
+    100% {
+        z-index: 4;
+    }
+}
+
+@-o-keyframes asd {
+    0% {
+        z-index: 2;
+    }
+
+    20% {
+        z-index: 4;
+    }
+
+    100% {
+        z-index: 4;
+    }
+}
+
+@keyframes asd {
+    0% {
+        z-index: 2;
+    }
+
+    20% {
+        z-index: 4;
+    }
+
+    100% {
+        z-index: 4;
+    }
+}
+
+.flip-clock-wrapper ul.play li.flip-clock-active .down {
+    z-index: 2;
+    -webkit-animation: turn 0.5s 0.5s linear both;
+    -moz-animation: turn 0.5s 0.5s linear both;
+    animation: turn 0.5s 0.5s linear both;
+}
+
+@-webkit-keyframes turn {
+    0% {
+        -webkit-transform: rotateX(90deg);
+    }
+
+    100% {
+        -webkit-transform: rotateX(0deg);
+    }
+}
+
+@-moz-keyframes turn {
+    0% {
+        -moz-transform: rotateX(90deg);
+    }
+
+    100% {
+        -moz-transform: rotateX(0deg);
+    }
+}
+
+@-o-keyframes turn {
+    0% {
+        -o-transform: rotateX(90deg);
+    }
+
+    100% {
+        -o-transform: rotateX(0deg);
+    }
+}
+
+@keyframes turn {
+    0% {
+        transform: rotateX(90deg);
+    }
+
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+.flip-clock-wrapper ul.play li.flip-clock-before .up {
+    z-index: 2;
+    -webkit-animation: turn2 0.5s linear both;
+    -moz-animation: turn2 0.5s linear both;
+    animation: turn2 0.5s linear both;
+}
+
+@-webkit-keyframes turn2 {
+    0% {
+        -webkit-transform: rotateX(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotateX(-90deg);
+    }
+}
+
+@-moz-keyframes turn2 {
+    0% {
+        -moz-transform: rotateX(0deg);
+    }
+
+    100% {
+        -moz-transform: rotateX(-90deg);
+    }
+}
+
+@-o-keyframes turn2 {
+    0% {
+        -o-transform: rotateX(0deg);
+    }
+
+    100% {
+        -o-transform: rotateX(-90deg);
+    }
+}
+
+@keyframes turn2 {
+    0% {
+        transform: rotateX(0deg);
+    }
+
+    100% {
+        transform: rotateX(-90deg);
+    }
+}
+
+.flip-clock-wrapper ul li.flip-clock-active {
+    z-index: 3;
+}
+
+.flip-clock-wrapper ul.play li.flip-clock-before .up .shadow {
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, black));
+    background: linear, top, rgba(0, 0, 0, 0.1) 0%, black 100%;
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+    background: linear, to bottom, rgba(0, 0, 0, 0.1) 0%, black 100%;
+    -webkit-animation: show 0.5s linear both;
+    -moz-animation: show 0.5s linear both;
+    animation: show 0.5s linear both;
+}
+
+.flip-clock-wrapper ul.play li.flip-clock-active .up .shadow {
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, black));
+    background: linear, top, rgba(0, 0, 0, 0.1) 0%, black 100%;
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+    background: linear, to bottom, rgba(0, 0, 0, 0.1) 0%, black 100%;
+    -webkit-animation: hide 0.5s 0.3s linear both;
+    -moz-animation: hide 0.5s 0.3s linear both;
+    animation: hide 0.5s 0.3s linear both;
+}
+
+.flip-clock-wrapper ul.play li.flip-clock-before .down .shadow {
+    background: -moz-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, rgba(0, 0, 0, 0.1)));
+    background: linear, top, black 0%, rgba(0, 0, 0, 0.1) 100%;
+    background: -o-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: -ms-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: linear, to bottom, black 0%, rgba(0, 0, 0, 0.1) 100%;
+    -webkit-animation: show 0.5s linear both;
+    -moz-animation: show 0.5s linear both;
+    animation: show 0.5s linear both;
+}
+
+.flip-clock-wrapper ul.play li.flip-clock-active .down .shadow {
+    background: -moz-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, rgba(0, 0, 0, 0.1)));
+    background: linear, top, black 0%, rgba(0, 0, 0, 0.1) 100%;
+    background: -o-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: -ms-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: linear, to bottom, black 0%, rgba(0, 0, 0, 0.1) 100%;
+    -webkit-animation: hide 0.5s 0.3s linear both;
+    -moz-animation: hide 0.5s 0.3s linear both;
+    animation: hide 0.5s 0.2s linear both;
+}
+
+@-webkit-keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes hide {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes hide {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-o-keyframes hide {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes hide {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.flip-clock-small-wrapper * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-clock-small-wrapper a {
+    cursor: pointer;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    color: #ccc;
+}
+
+.flip-clock-small-wrapper a:hover {
+    color: #fff;
+}
+
+.flip-clock-small-wrapper ul {
+    list-style: none;
+}
+
+.flip-clock-small-wrapper.clearfix:before,
+.flip-clock-small-wrapper.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.flip-clock-small-wrapper.clearfix:after {
+    clear: both;
+}
+
+.flip-clock-small-wrapper.clearfix {
+    *zoom: 1;
+}
+
+.flip-clock-small-wrapper {
+    font: normal 11px "Helvetica Neue", Helvetica, sans-serif;
+    -webkit-user-select: none;
+}
+
+.flip-clock-small-wrapper .flip-clock-meridium {
+    background: none !important;
+    box-shadow: 0 0 0 !important;
+    font-size: 18px !important;
+}
+
+.flip-clock-small-wrapper .flip-clock-meridium a {
+    color: #313333;
+}
+
+.flip-clock-small-wrapper {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin: 1em;
+}
+
+.flip-clock-small-wrapper:before,
+.flip-clock-small-wrapper:after {
+    content: " ";
+    display: table;
+}
+
+.flip-clock-small-wrapper:after {
+    clear: both;
+}
+
+.flip-clock-small-wrapper ul {
+    position: relative;
+    float: left;
+    margin: 2px;
+    width: 30px;
+    padding: 0;
+    height: 38px;
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 37px;
+    border-radius: 6px;
+    background: #000;
+}
+
+.flip-clock-small-wrapper ul li {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-decoration: none !important;
+    margin-left: 0;
+}
+
+.flip-clock-small-wrapper ul li:first-child {
+    z-index: 2;
+}
+
+.flip-clock-small-wrapper ul li a {
+    display: block;
+    height: 100%;
+    -webkit-perspective: 200px;
+    -moz-perspective: 200px;
+    perspective: 200px;
+    margin: 0 !important;
+    overflow: visible !important;
+    cursor: default !important;
+}
+
+.flip-clock-small-wrapper ul li a div {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    font-size: 80px;
+    overflow: hidden;
+}
+
+.flip-clock-small-wrapper ul li a div .shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.flip-clock-small-wrapper ul li a div.up {
+    -webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    top: 0;
+}
+
+.flip-clock-small-wrapper ul li a div.up:after {
+    content: "";
+    position: absolute;
+    top: 44px;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.flip-clock-small-wrapper ul li a div.down {
+    -webkit-transform-origin: 50% 0;
+    -moz-transform-origin: 50% 0;
+    -ms-transform-origin: 50% 0;
+    -o-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    bottom: 0;
+}
+
+.flip-clock-small-wrapper ul li a div div.inn {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 200%;
+    color: #ccc;
+    text-shadow: 0 1px 2px #000;
+    text-align: center;
+    background-color: #333;
+    border-radius: 6px;
+    font-size: 20px;
+}
+
+.flip-clock-small-wrapper ul li a div.up div.inn {
+    top: 0;
+}
+
+.flip-clock-small-wrapper ul li a div.down div.inn {
+    bottom: 0;
+}
+
+.flip-clock-small-wrapper ul.play li.flip-clock-before {
+    z-index: 3;
+}
+
+.flip-clock-small-wrapper .flip {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.flip-clock-small-wrapper ul.play li.flip-clock-active {
+    -webkit-animation: asd 0.5s 0.5s linear both;
+    -moz-animation: asd 0.5s 0.5s linear both;
+    animation: asd 0.5s 0.5s linear both;
+    z-index: 5;
+}
+
+.flip-clock-small-wrapper .flip-clock-divider {
+    float: left;
+    display: inline-block;
+    position: relative;
+    width: 15px;
+    height: 40px;
+}
+
+.flip-clock-small-wrapper .flip-clock-divider:first-child {
+    width: 0;
+}
+
+.flip-clock-small-wrapper .flip-clock-dot {
+    display: block;
+    background: #323434;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    left: 5px;
+}
+
+.flip-clock-small-wrapper .flip-clock-divider .flip-clock-label {
+    position: absolute;
+    top: -1.1em;
+    right: -48px;
+    color: black;
+    text-shadow: none;
+}
+
+.flip-clock-small-wrapper .flip-clock-divider.minutes .flip-clock-label {
+    right: -54px;
+}
+
+.flip-clock-small-wrapper .flip-clock-divider.seconds .flip-clock-label {
+    right: -56px;
+}
+
+.flip-clock-small-wrapper .flip-clock-dot.top {
+    top: 10px;
+}
+
+.flip-clock-small-wrapper .flip-clock-dot.bottom {
+    bottom: 6px;
+}
+
+.flip-clock-small-wrapper ul.play li.flip-clock-active .down {
+    z-index: 2;
+    -webkit-animation: turn 0.5s 0.5s linear both;
+    -moz-animation: turn 0.5s 0.5s linear both;
+    animation: turn 0.5s 0.5s linear both;
+}
+
+.flip-clock-small-wrapper ul.play li.flip-clock-before .up {
+    z-index: 2;
+    -webkit-animation: turn2 0.5s linear both;
+    -moz-animation: turn2 0.5s linear both;
+    animation: turn2 0.5s linear both;
+}
+
+.flip-clock-small-wrapper ul li.flip-clock-active {
+    z-index: 3;
+}
+
+.flip-clock-small-wrapper ul.play li.flip-clock-before .up .shadow {
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, black));
+    background: linear, top, rgba(0, 0, 0, 0.1) 0%, black 100%;
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+    background: linear, to bottom, rgba(0, 0, 0, 0.1) 0%, black 100%;
+    -webkit-animation: show 0.5s linear both;
+    -moz-animation: show 0.5s linear both;
+    animation: show 0.5s linear both;
+}
+
+.flip-clock-small-wrapper ul.play li.flip-clock-active .up .shadow {
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, black));
+    background: linear, top, rgba(0, 0, 0, 0.1) 0%, black 100%;
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+    background: linear, to bottom, rgba(0, 0, 0, 0.1) 0%, black 100%;
+    -webkit-animation: hide 0.5s 0.3s linear both;
+    -moz-animation: hide 0.5s 0.3s linear both;
+    animation: hide 0.5s 0.3s linear both;
+}
+
+.flip-clock-small-wrapper ul.play li.flip-clock-before .down .shadow {
+    background: -moz-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, rgba(0, 0, 0, 0.1)));
+    background: linear, top, black 0%, rgba(0, 0, 0, 0.1) 100%;
+    background: -o-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: -ms-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: linear, to bottom, black 0%, rgba(0, 0, 0, 0.1) 100%;
+    -webkit-animation: show 0.5s linear both;
+    -moz-animation: show 0.5s linear both;
+    animation: show 0.5s linear both;
+}
+
+.flip-clock-small-wrapper ul.play li.flip-clock-active .down .shadow {
+    background: -moz-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, rgba(0, 0, 0, 0.1)));
+    background: linear, top, black 0%, rgba(0, 0, 0, 0.1) 100%;
+    background: -o-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: -ms-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: linear, to bottom, black 0%, rgba(0, 0, 0, 0.1) 100%;
+    -webkit-animation: hide 0.5s 0.3s linear both;
+    -moz-animation: hide 0.5s 0.3s linear both;
+    animation: hide 0.5s 0.2s linear both;
+}
