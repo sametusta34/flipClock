@@ -21,5 +21,8 @@ Clone the project to your local machine:
 git clone https://github.com/sametusta34/flipClock.git
 cd flipClock
 
+## Run
+npm start 
+
 ## Build
 npm run dist    
