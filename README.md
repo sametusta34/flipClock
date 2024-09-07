@@ -35,6 +35,13 @@ flipClock/
 ├── package.json
 └── README.md
 
+Code Owners
+The following users are code owners and can approve pull requests:
+
+@sametusta34
+ 
+
+
 ## Run
 npm start 
 
